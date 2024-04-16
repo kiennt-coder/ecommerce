@@ -1,0 +1,9 @@
+services:
+    ecommerce-cms-frontend:
+        build:
+            context: ./frontend/cms
+            dockerfile: Dockerfile
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./frontend/cms:/app
