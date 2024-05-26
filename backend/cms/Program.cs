@@ -63,7 +63,11 @@ builder.Services.AddCors(policy =>
 {
     policy.AddDefaultPolicy(builder =>
     {
-        builder.WithOrigins("http://localhost:3000", "http://localhost:3000/");
+        builder.WithOrigins(
+            "http://localhost:3000", "http://localhost:3000/",
+            "https://ecommerce-omega-eosin.vercel.app", "https://ecommerce-omega-eosin.vercel.app/",
+            "https://ecommerce-kienntcoders-projects.vercel.app", "https://ecommerce-kienntcoders-projects.vercel.app"
+        );
         builder.AllowAnyMethod();
         builder.AllowAnyHeader();
         builder.AllowCredentials();
