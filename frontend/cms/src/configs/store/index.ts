@@ -1,4 +1,4 @@
-import { Action, AnyAction, configureStore, ThunkAction, ThunkDispatch } from "@reduxjs/toolkit";
+import { Action, configureStore, ThunkAction, ThunkDispatch } from "@reduxjs/toolkit";
 
 import rootReducer, { RootState } from "./reducers";
 
@@ -16,9 +16,9 @@ if (process.env.NODE_ENV !== "production" && module.hot) {
 }
 
 // Export Dispatch type
-export type AppDispatch = ThunkDispatch<RootState, any, AnyAction>;
+export type AppDispatch = ThunkDispatch<RootState, any, Action<string>>;
 // Export Action type
-export type AppThunk = ThunkAction<void, RootState, null, Action<string>>;
+export type AppThunk = ThunkAction<any|void, RootState, null, Action<string>>;
 
 export const getState = store.getState();
 

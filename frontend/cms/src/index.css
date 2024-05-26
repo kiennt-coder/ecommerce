@@ -16,6 +16,24 @@
   src: url('./assets/fonts/Nunito_Sans/NunitoSans-Italic-VariableFont_YTLC\,opsz\,wdth\,wght.ttf') format('ttf');
 }
 
+/* Apply to all autofilled elements */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px inherit inset !important; /* Adjust to your desired background color */
+    box-shadow: 0 0 0 1000px inherit inset !important;         /* Adjust to your desired background color */
+    -webkit-text-fill-color: inherit !important;              /* Adjust to your desired text color */
+    transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
+}
+
+/* For compatibility with non-WebKit browsers */
+input:autofill,
+textarea:autofill,
+select:autofill {
+    background-color: inherit !important;                     /* Adjust to your desired background color */
+    color: inherit !important;                                /* Adjust to your desired text color */
+}
+
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;

@@ -1,10 +1,13 @@
 import { Outlet, Navigate } from "react-router-dom";
 
+import { loginPath } from "../../pages/Login/route";
+import useVerifyToken from "../../hooks/useVerifyToken";
+
 // Create Private outlet
 const PrivateOutlet = () => {
-    const auth = true;
+    const [tokenValid] = useVerifyToken();
 
-    return auth ? <Outlet /> : <Navigate to="/dang-nhap" />;
+    return tokenValid ? <Outlet /> : <Navigate to={loginPath.index} />;
 };
 
 export { PrivateOutlet };

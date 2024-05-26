@@ -18,11 +18,6 @@ export const darkThemeConfig: ThemeConfig = {
 			headerPadding: "0 24px",
 			footerPadding: "16px",
 		},
-        Input: {
-            borderRadius: 19,
-            // colorBgContainer: "#F1F4F9",
-			// colorBorder: "#D5D5D5",
-        },
         Menu: {
 			itemSelectedColor: "#FFFFFF",
 			itemSelectedBg: "#4880FF",

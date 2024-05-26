@@ -2,16 +2,24 @@ import { lazy } from "react";
 import { Route } from "react-router-dom";
 
 import ServerError from "../ServerError";
-import { Loading } from "../../components";
+import { Loading, LoadingSpin } from "../../components";
 
 const LoginPage = lazy(() => import("."))
 
+interface LoginPath {
+    index: string;
+}
+
+export const loginPath: LoginPath = {
+    index: "/dang-nhap",
+}
+
 const routes = (
-    <Route path="/dang-nhap">
+    <Route path={loginPath.index}>
         <Route
             index
             element={
-                <Loading fallback={<>Loading</>}>
+                <Loading fallback={<LoadingSpin />}>
                     <LoginPage />
                 </Loading>
             }

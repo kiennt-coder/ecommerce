@@ -12,6 +12,8 @@ type TableCustomProps = Omit<TableProps, "pagination"> & {
     pagination: PaginationProps;
 };
 
+
+
 const Table = ({ columns, dataSource, pagination, scroll }: TableCustomProps) => {
     const { token } = theme.useToken();
 
@@ -19,6 +21,9 @@ const Table = ({ columns, dataSource, pagination, scroll }: TableCustomProps) =>
         <TableWrapper vertical gap={token.sizeLG}>
             <TableAnt columns={columns} dataSource={dataSource} scroll={scroll} pagination={false} />
             <Pagination
+                onChange={(page, pageSize) => {
+                    console.log({ page, pageSize })
+                }}
                 defaultCurrent={pagination.current}
                 total={pagination.total}
                 pageSize={pagination.pageSize}

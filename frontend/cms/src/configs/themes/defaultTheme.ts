@@ -12,7 +12,6 @@ export const defaultThemeConfig: ThemeConfig = {
 
 		// primary color
 		colorPrimary: "#4880FF",
-		// colorPrimaryBg: "#4880FF",
 	},
 	components: {
 		Layout: {
@@ -21,7 +20,6 @@ export const defaultThemeConfig: ThemeConfig = {
 			footerPadding: "16px",
 		},
 		Input: {
-            borderRadius: 19,
 			colorBgContainer: "#F1F4F9",
 			colorBorder: "#D5D5D5",
         },

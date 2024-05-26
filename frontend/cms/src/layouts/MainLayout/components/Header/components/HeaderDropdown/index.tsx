@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { DropdownProps, MenuProps, theme } from "antd";
 import { DownCircleOutlined } from "@ant-design/icons";
 
 import { HeaderDropdownWrapper } from "./styled";
-import { Link } from "react-router-dom";
+import { loginPath } from "../../../../../../pages/Login/route";
 
 type DropdownOpenChange = DropdownProps["onOpenChange"];
 
@@ -20,7 +21,7 @@ const items: MenuProps["items"] = [
         type: "divider",
     },
     {
-        label: <Link to="/dang-nhap">Logout</Link>,
+        label: <Link to={loginPath.index}>Logout</Link>,
         key: "2",
     },
 ];

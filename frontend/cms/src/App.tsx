@@ -21,6 +21,7 @@ function App() {
                     theme === Theme.Default ? defaultThemeConfig : darkThemeConfig
                 }
                 locale={enUS}
+                wave={{ disabled: true }}
             >
                 <RouterProvider router={router} />
             </ConfigProvider>

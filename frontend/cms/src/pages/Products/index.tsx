@@ -176,7 +176,7 @@ const Products = () => {
     }
 
     const scroll: TableProps<DataType>['scroll'] = {
-        y: 400,
+        y: 520,
         scrollToFirstRowOnChange: true,
     }
 

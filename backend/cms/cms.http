@@ -1,0 +1,31 @@
+@cms_HostAddress = https://localhost:7098
+
+GET {{cms_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+POST {{cms_HostAddress}}/v1/Auth/refreshToken
+Accept: application/json
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjY2NDkwYTYyNzY1ZGE2YjA2M2RhMGZjOSIsIkVtYWlsIjoia2llbm50LmNvZGVyQGdtYWlsLmNvbSIsIlVzZXJuYW1lIjoia2llbm50Iiwic3ViIjoiSldUU2VydmljZUFjY2Vzc1Rva2VuIiwianRpIjoiNTNlYzhjMWQtZWQ3NS00N2ZhLTk1YjItMDYzOTA4ZjE4MWI0IiwiaWF0IjoxNzE2NDAyNTE0LCJuYmYiOjE3MTY0MDI1MTQsImV4cCI6MTcxNjQwMjgxNCwiaXNzIjoiaHR0cHM6Ly9nb29nbGUuY29tIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzA5OC8ifQ.iWJbWJKSDohzzoHPpNDSMRkiZzrcc56o2fIcNbYDwr4",
+  "refreshToken": "zbKDm9FV0i8R1df36gBAZrDXJkD7txGHifS59qFu1OQ="
+}
+
+###
+
+POST {{cms_HostAddress}}/v1/Mail/SendMail
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjY2NDkwYTYyNzY1ZGE2YjA2M2RhMGZjOSIsIkVtYWlsIjoia2llbm50LmNvZGVyQGdtYWlsLmNvbSIsIlVzZXJuYW1lIjoia2llbm50Iiwic3ViIjoiSldUU2VydmljZUFjY2Vzc1Rva2VuIiwianRpIjoiMmRiNTQwYTItMzEyZi00MTEyLTgyMzMtMDQ5YTk1NjgwYzg5IiwiaWF0IjoxNzE2NDA0NTA0LCJuYmYiOjE3MTY0MDQ1MDQsImV4cCI6MTcxNjQwNjMwMywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzA5OC8iLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo3MDk4LyJ9.4QFHxSycYHBJZaLy_ep6jUAH2QsgcPLb0EIrmhLcjOg
+
+{
+  "toEmail": "string",
+  "subject": "string",
+  "body": "string"
+}
+
+###
+

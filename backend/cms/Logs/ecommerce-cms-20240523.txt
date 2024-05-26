@@ -1,0 +1,17 @@
+2024-05-23 03:23:48.957 +07:00 [INF] User profile is available. Using '/Users/kiennt/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-05-23 03:23:49.414 +07:00 [INF] Now listening on: https://localhost:7098
+2024-05-23 03:23:49.414 +07:00 [INF] Now listening on: http://localhost:5238
+2024-05-23 03:23:49.417 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-23 03:23:49.418 +07:00 [INF] Hosting environment: Development
+2024-05-23 03:23:49.418 +07:00 [INF] Content root path: /Users/kiennt/Documents/projects/ecommerce/backend/cms
+2024-05-23 03:23:49.693 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7098/swagger/index.html - null null
+2024-05-23 03:23:49.833 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7098/swagger/index.html - 200 null text/html;charset=utf-8 142.3709ms
+2024-05-23 03:23:50.059 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7098/swagger/v1/swagger.json - null null
+2024-05-23 03:23:50.178 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7098/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 118.8788ms
+2024-05-23 03:23:52.929 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7098/v1/Mail/SendMail - application/json 68
+2024-05-23 03:23:52.957 +07:00 [INF] CORS policy execution failed.
+2024-05-23 03:23:52.957 +07:00 [INF] Request origin https://localhost:7098 does not have permission to access the resource.
+2024-05-23 03:23:53.061 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-05-23 03:23:53.066 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-05-23 03:23:53.067 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7098/v1/Mail/SendMail - 401 0 null 138.9026ms
