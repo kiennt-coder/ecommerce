@@ -76,7 +76,15 @@ const callApiAsync = function ({
 			return response.data;
 		})
 		.catch(function (error: AxiosError<unknown, ApiResponseBase>) {
+			if(error.response?.data)
 			return error.response?.data;
+			else {
+				return {
+                    status: 500,
+                    message: `Hệ thống đang bị lỗi. Vui lòng liên hệ quản trị viên để xử lý!`,
+                    data: error.code,
+                } as ApiResponseBase<string>;
+			}
 		});
 };
 
