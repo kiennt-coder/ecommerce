@@ -75,7 +75,7 @@ namespace CMS.Services
                 var registerId = ObjectId.GenerateNewId();
 
                 // Create mail data
-                string verifyEmailUrl = $"http://localhost:3000/xac-thuc-email?registerId={registerId}";
+                string verifyEmailUrl = $"https://ecommerce-kienntcoders-projects.vercel.app/xac-thuc-email?registerId={registerId}";
                 string filePath = Directory.GetCurrentDirectory() + "\\Templates\\Mail\\VerifyEmail.html";
                 string fileText = File.ReadAllText(filePath);
                 fileText = string.Format(fileText, data.Username, verifyEmailUrl, verifyEmailUrl);
